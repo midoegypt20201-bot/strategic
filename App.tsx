@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-blue: #2563eb;
+  --color-brand-teal: #0d9488;
+}
+
+body {
+  direction: rtl;
+  @apply bg-slate-50 text-slate-900;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300;
+}
+
+.bento-card {
+  @apply bg-white p-10 rounded-[50px] shadow-xl border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1;
+}
+
+.high-density-sidebar {
+  @apply w-72 bg-slate-900 text-white p-6 flex flex-col shadow-2xl shrink-0 h-screen sticky top-0;
+}
+
+.card-high-density {
+  @apply bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden;
+}
+
+.hub-dashed-circle {
+  @apply absolute inset-0 border-[1.5px] border-dashed border-slate-300 rounded-full animate-[spin_60s_linear_infinite];
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
