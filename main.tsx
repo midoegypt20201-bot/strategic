@@ -4,6 +4,7 @@
  */
 
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Target, 
@@ -809,3 +810,14 @@ export default function App() {
     </div>
   );
 }
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Root element not found');
+}
+
+ReactDOM.createRoot(rootElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
